@@ -4,7 +4,7 @@ One of the nicest things about using TypeScript is the IDE integrations. The int
 
 There are times, however, when there just isn't enough information in the type definitions for us to know what a function does or why each of its parameters are important. Take a look at this screenshot:
 
-!["Boring annotation"](/ui.dev-advanced_javascript/imgs/boring-annotation.png "Boring annotation png")
+!["Boring annotation"](/ui.dev-typescript/imgs/boring-annotation.png "Boring annotation png")
 
 We can see the properties and their types, but we don't know why they are important. Is `color` the color name, or an RGB hex value? What does `sweetness` represent? Is it a number from 0 to 1, or from 0 to 100, or from -1 to 1? Those kinds of details aren't communicated through the types.
 
@@ -23,7 +23,7 @@ type Fruit = {
 
 In an IDE, it would look something like this:
 
-!["Better annotation"](/ui.dev-advanced_javascript/imgs/better-annotation.png "Better annotation png")
+!["Better annotation"](/ui.dev-typescript/imgs/better-annotation.png "Better annotation png")
 
 That's helpful, but we still don't have details about the `sweetness` property. We can add those using special TSDocs tags. These are added after the main description, by extending the comment down a few lines. Some IDEs add extra asterisks to each line, but it isn't strictly required.
 
@@ -46,7 +46,7 @@ type Fruit = {
 
 And hovering over this in our IDE looks something like this:
 
-!["Best annotation"](/ui.dev-advanced_javascript/imgs/best-annotation.png "Best annotation png")
+!["Best annotation"](/ui.dev-typescript/imgs/best-annotation.png "Best annotation png")
 
 You can see how much of a difference this makes in making it easy to understand your API. The `@param` tag works exactly the same with function parameters; we only need to add the @returns tag, which let's us add a description to our return value.
 
@@ -65,7 +65,7 @@ function eatFruit(fruit: Fruit): FruitWaste {
 
 That annotation looks like this in our IDE:
 
-!["Function annotation"](/ui.dev-advanced_javascript/imgs/function-annotation.png "Function annotation png")
+!["Function annotation"](/ui.dev-typescript/imgs/function-annotation.png "Function annotation png")
 
 It doesn't stop there, either. You can add annotations to interfaces, classes, class methods, objects, even individual variables. For example, I can add a note indicating that this `price` variable is actually in USD.
 
